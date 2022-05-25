@@ -24,8 +24,11 @@ class Rectangle:
 def main(): 
 
     myRectangle = Rectangle()
+    print("The area of the rectangle is", myRectangle.getArea())
 
-    thing = myRectangle.getArea
-    print(thing)
+    print("The width of the rectangle is now: ", myRectangle.width)
+    print("The height of the rectangle is now: ", myRectangle.height)
 
+    
+main() 
     
