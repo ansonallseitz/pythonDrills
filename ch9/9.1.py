@@ -5,7 +5,7 @@
 
 #Step 1, define the window, step 2 define the buttons. 
 #step #3 create logic to make circle appear. 
-from bisect import bisect_left
+
 from tkinter import *
 
 class BallDemo: 
@@ -17,13 +17,13 @@ class BallDemo:
         self.canvas = Canvas(window, width = 400, height = 350, bg = "white")
         self.canvas.pack()
         #place buttons in frame 
-        frame = Frame(window)
-        frame.pack()
+        frame1 = Frame(window)
+        frame1.pack()
 
-        btLeft = Button(frame, text = "Left", command = self.displayLeft)
-        btRight = Button(frame, text = "Right", command = self.displayRight)
-        btUp = Button(Frame, text = "Up", command = self.displayUp)
-        BtDown = Button(Frame, text = "down", command = self.displayDown)
+        btLeft = Button(frame1, text = "Left", command = self.displayLeft)
+        btRight = Button(frame1, text = "Right", command = self.displayRight)
+        btUp = Button(frame1, text = "Up", command = self.displayUp)
+        BtDown = Button(frame1, text = "down", command = self.displayDown)
 
 
         btLeft.grid(row =1, column = 1)
@@ -35,13 +35,17 @@ class BallDemo:
         window.mainloop() # Create an event loop
 
     def displayLeft(self):
-        self.canvas.create_oval(20, 20, 23, 23, fill = "blue", tags = "left")
+        self.canvas.delete("left", "Right", "Up", "Down")
+        self.canvas.create_oval(40, 150, 50, 160, fill = "#00FFFF", tags = "left")
     def displayRight(self):
-        self.canvas.create_oval(20, 70, 23, 73, fill = "blue", tags = "left")
+        self.canvas.delete("left", "Right", "Up", "Down")
+        self.canvas.create_oval(300, 150, 310, 160, fill = "#ff0000", tags = "Right")
     def displayUp(self):
-        self.canvas.create_oval(5, 10, 8, 13, fill = "blue", tags = "left")
+        self.canvas.delete("left", "Right", "Up", "Down")
+        self.canvas.create_oval(180, 20, 190, 30, fill = "#AFE1AF", tags = "Up")
     def displayDown(self):
-        self.canvas.create_oval(40, 10, 43, 13, fill = "blue", tags = "left")
+        self.canvas.delete("left", "Right", "Up", "Down")
+        self.canvas.create_oval(180, 250, 190, 260, fill = "#FFA500", tags = "Down")
 
 
 
