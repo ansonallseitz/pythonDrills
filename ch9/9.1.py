@@ -31,16 +31,18 @@ class BallDemo:
         btUp.grid(row =1, column =3)
         BtDown.grid(row =1, column =4)
 
+
         window.mainloop() # Create an event loop
 
-        def displayLeft(self):
-            self.canvas.create_oval(20, 20, 23, 23, fill = "blue", tags = "left")
-        def displayRight(self):
-            self.canvas.create_oval(20, 70, 23, 73, fill = "blue", tags = "left")
-        def displayUp(self):
-            self.canvas.create_oval(5, 10, 8, 13, fill = "blue", tags = "left")
-        def displayDown(self):
-            self.canvas.create_oval(40, 10, 43, 13, fill = "blue", tags = "left")
+    def displayLeft(self):
+        self.canvas.create_oval(20, 20, 23, 23, fill = "blue", tags = "left")
+    def displayRight(self):
+        self.canvas.create_oval(20, 70, 23, 73, fill = "blue", tags = "left")
+    def displayUp(self):
+        self.canvas.create_oval(5, 10, 8, 13, fill = "blue", tags = "left")
+    def displayDown(self):
+        self.canvas.create_oval(40, 10, 43, 13, fill = "blue", tags = "left")
+
 
 
 BallDemo()
