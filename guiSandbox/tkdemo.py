@@ -1,6 +1,10 @@
-from tkinter import *
-window = Tk()
-window.title("Welcome to your new App")
+import tkinter as tk
 
-window.mainloop()
 
+root = tk.Tk()
+root.title('Tkinter Window Demo')
+root.geometry('300x200+50+50')
+root.resizable(False, False)
+root.iconbitmap('./assets/pythontutorial.ico')
+
+root.mainloop()
