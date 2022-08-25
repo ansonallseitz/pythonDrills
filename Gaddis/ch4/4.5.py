@@ -12,12 +12,12 @@ print("and the fucking program will tell you the average rainfall")
 
 
 yearNumber = input(int("How many fucking years?: "))
-monthArray = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December', 'end']
+monthList = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December', 'end']
 
 for y in range(yearNumber):
-    for mon in range(monthArray):
-        while mon != 'end':
-            print(" please enter the rainfall total for", mon)
-            monthRainfall = int(": ")
-    averageYearRainfall = monthRainfall / 12
-    print("Average rainfall for year", y, " = ", averageYearRainfall)
+    for mon in range(len(monthList)):
+        while mon != 13:
+            print(" please enter the rainfall total for month #", mon)
+            monthRainfall = input(int(": "))
+averageYearRainfall = monthRainfall / 12
+print("Average rainfall for year", y, " = ", averageYearRainfall)
