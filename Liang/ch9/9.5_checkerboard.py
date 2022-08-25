@@ -10,11 +10,13 @@ class CheckerboardDemo:
 
         #create frame & place in canvas 
 
-        self.canvas = Canvas(window, width = 800, height = 750, bg = "#D3D3D3")
+        self.canvas = Canvas(window, width = 2000, height = 2000, bg = "#D3D3D3")
+        self.canvas.pack()
 
         for y in range(10):
             for x in range(10):
-                self.canvas.create_rectangle(x * 20, y * 20, (x + 1) * 20, (y + 1) * 20, fill='purple')
+                 self.canvas.create_rectangle(x * 20, y * 20, (x + 1) * 20, (y + 1) * 20,)
+
 
         window.mainloop()
 
