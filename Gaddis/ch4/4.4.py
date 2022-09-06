@@ -10,7 +10,6 @@
 # 2                    80
 # 3                   120
 
-from time import time
 
 
 print("This is the  mph calculating program")

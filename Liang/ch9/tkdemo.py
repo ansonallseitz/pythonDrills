@@ -1,34 +1,20 @@
-import tkinter as tk
+# Import the required library
+from tkinter import *
 
-# --- constants --- (UPPER_CASE_NAMES)
+# Create an instance of tkinter frame or widget
+win = Tk()
+win.geometry("700x350")
 
-SIZE = 20
+def update_text():
+   # Configuring the text in Label widget
+   label.configure(text="This is updated Label text")
 
-# --- main --- (lower_case_names)
+# Create a label widget
+label=Label(win, text="This is New Label text", font=('Helvetica 14 bold'))
+label.pack(pady= 30)
 
-root = tk.Tk()
+# Create a button to update the text of label widget
+button=Button(win, text= "Update", command=update_text)
+button.pack()
 
-canvas = tk.Canvas(root)
-canvas.pack()
-
-color = 'white'
-
-for y in range(8):
-
-    for x in range(8):
-        x1 = x*SIZE
-        y1 = y*SIZE
-        x2 = x1 + SIZE
-        y2 = y1 + SIZE
-        canvas.create_rectangle((x1, y1, x2, y2), fill=color)
-        if color == 'white':
-            color = 'black'
-        else:    
-            color = 'white'
-
-    if color == 'white':
-        color = 'black'
-    else:    
-        color = 'white'
-
-root.mainloop()   
+win.mainloop()

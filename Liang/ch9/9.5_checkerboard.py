@@ -17,6 +17,8 @@ class CheckerboardDemo:
             for x in range(10):
                  self.canvas.create_rectangle(x * 20, y * 20, (x + 1) * 20, (y + 1) * 20,)
 
+                 
+
 
         window.mainloop()
 

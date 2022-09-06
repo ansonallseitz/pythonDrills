@@ -5,19 +5,23 @@
 #After all iterations, the program should display the number of months, the total inches of rainfall, and the average rainfall per month for the entire period.
 
 
-print("Hey asshat!")
+print("Hey Buddy!")
 print("This is the average rainfall calcualting program.")
 print(" first enter the number of years, then the rainfall each month.")
-print("and the fucking program will tell you the average rainfall")
+print("and the program will tell you the average rainfall")
 
 
-yearNumber = input(int("How many fucking years?: "))
-monthList = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December', 'end']
+yearNumber = int(input("How many years?: "))
+monthList = ['January', 'Febuary', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+totalRainfall= 0
+monthRainfall = 0
 
 for y in range(yearNumber):
     for mon in range(len(monthList)):
-        while mon != 13:
-            print(" please enter the rainfall total for month #", mon)
-            monthRainfall = input(int(": "))
-averageYearRainfall = monthRainfall / 12
-print("Average rainfall for year", y, " = ", averageYearRainfall)
+        print(' enter the monthly rainfall for',monthList[mon])
+        monthRainfall = int(input(': '))
+        totalRainfall =  totalRainfall + monthRainfall 
+
+averageYearRainfall = totalRainfall / (12 * yearNumber)
+print("Average rainfall for the peroid", y, " = ", averageYearRainfall)
+print("Total Rainfall for the Peroid: ", y, "=", totalRainfall)
