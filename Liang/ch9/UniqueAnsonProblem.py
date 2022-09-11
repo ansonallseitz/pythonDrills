@@ -2,7 +2,7 @@
 from tkinter import *
 
 
-class TickTackToeTk():
+class LabelLoop():
 
     def __init__(self):
         #create the window 
@@ -24,11 +24,12 @@ class TickTackToeTk():
         #that changes the third one. 
     
         for i in range (3):
-            firstLabelList[i]=Label(window, text=f"label {i}").grid(row=x, column=y) 
+            firstLabelList[i]=Label(window, text=f"label {i}")
+            firstLabelList[i].grid(row=x, column=y)
             x+=1
 
         def on_click():
-            firstLabelList[2]['text'] = "Yay it worked!"
+             firstLabelList[2]['text'] = "Yay it worked!"
             
 
 
@@ -40,4 +41,4 @@ class TickTackToeTk():
    
         window.mainloop()
     
-TickTackToeTk()
+LabelLoop()
