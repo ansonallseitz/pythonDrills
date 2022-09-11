@@ -26,15 +26,16 @@ class TickTackToeTk():
         for i in range (3):
             firstLabelList[i]=Label(window, text=f"label {i}").grid(row=x, column=y) 
             x+=1
+
+        def on_click():
+            firstLabelList[2]['text'] = "Yay it worked!"
             
 
 
         changeBttn = Button(window, text="change", command=on_click).grid(row=5, column=0)
 
         #Here is the problem, how do you fix this? 
-        def on_click():
-            firstLabelList2.configure(text="This is updated Label text")
-               
+  
 
    
         window.mainloop()
