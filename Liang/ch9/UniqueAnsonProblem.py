@@ -17,19 +17,16 @@ class LabelLoop():
         x=0
         y=0
 
-        firstLabelList= [0]*3
-
-        #ok, so i have a proof of concept, I can create labels using a loop. 
-        #The next thing I want to do is prove that I can add logic to the labels, so I want to make a button
-        #that changes the third one. 
-    
-        for i in range (3):
-            firstLabelList[i]=Label(window, text=f"label {i}")
-            firstLabelList[i].grid(row=x, column=y)
-            x+=1
+        firstLabelList = []
+        for y in range(3):
+            for x in range(3):
+                label = Label(window, text=f'Label {x}×{y}')
+                firstLabelList.append(label)
+                label.grid(row=y, column=x)
+          
 
         def on_click():
-             firstLabelList[2]['text'] = "Yay it worked!"
+             firstLabelList[6]['text'] = "Yay it worked!"
             
 
 
