@@ -12,7 +12,14 @@ class LabelLoop():
         #window.columnconfigure((1, 2, 3,), weight=1)
         #window.rowconfigure((1, 2, 3, 4), weight=1)
 
-     
+        photo_x = PhotoImage(file='x.png')
+        photo_o = PhotoImage(file='o.png')
+        for y in range(3):
+            for x in range(3):
+                if (x + y) % 2:
+                    image = photo_x
+                else:
+                    image = photo_o
 
         x=0
         y=0
@@ -20,9 +27,17 @@ class LabelLoop():
         firstLabelList = []
         for y in range(3):
             for x in range(3):
-                label = Label(window, text=f'Label {x}×{y}')
+                label = Label(window, image=image)
+                # text=f'Label {x}×{y}')
+
+                #label = Label(window, text=f'Label {x}×{y}')
                 firstLabelList.append(label)
                 label.grid(row=y, column=x)
+
+
+
+    #label = Label(window, image=image)
+
           
 
         def on_click():
