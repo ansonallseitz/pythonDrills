@@ -27,6 +27,11 @@ class LabelLoop():
         firstLabelList = []
         for y in range(3):
             for x in range(3):
+                if (x + y) % 2:
+                    image = photo_x
+                else:
+                    image = photo_o
+
                 label = Label(window, image=image)
                 # text=f'Label {x}×{y}')
 
