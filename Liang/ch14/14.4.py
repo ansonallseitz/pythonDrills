@@ -21,8 +21,9 @@ class LetterCounter():
         BtshowResults = Button(window, text ="Show Results", command = self.showResults).grid(column=9, row = 7)
         BtnBrowse = Button(window, text="Browse", command =self.browse).grid(column=7, row =7)
         #BtshowResults.pack()
-        Lbl =Label
-
+        self.EnterdFile = StringVar()
+        Entry(window, textvariable = self.EnterdFile).grid(column=4, row=7)
+        Label(window, text="Enter a filename").grid(column=1, row=7)
 
         window.mainloop()
 
