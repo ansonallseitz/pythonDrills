@@ -1,5 +1,6 @@
 from tkinter import *
 from tkinter import filedialog
+from tkinter.filedialog import askopenfilename
 
 class LetterCounter():
 
@@ -22,7 +23,7 @@ class LetterCounter():
         BtnBrowse = Button(window, text="Browse", command =self.browseFile).grid(column=7, row =7)
         #BtshowResults.pack()
         self.EnterdFile = StringVar()
-        Entry(window, textvariable = self.EnterdFile).grid(column=4, row=7)
+        fileEntry = Entry(window, textvariable = self.EnterdFile).grid(column=4, row=7)
         Label(window, text="Enter a filename").grid(column=0, row=7)
 
         window.mainloop()
@@ -33,7 +34,8 @@ class LetterCounter():
       #  self.canvas.create_oval(75, 40, 112, 90, fill="purple")
     
     def browseFile(self):
-        filename 
+        filenameForReading = askopenfilename()
+        
 
  
 
