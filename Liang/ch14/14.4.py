@@ -38,7 +38,8 @@ class LetterCounter():
     #show result function 
     def showResults(self, filenameForReading):
         letterCount = {} #create empty dictionary 
-        filenameForReading 
+        infile = open(filenameForReading, "r")
+         
 
  
 
