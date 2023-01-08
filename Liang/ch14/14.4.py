@@ -34,12 +34,30 @@ class LetterCounter():
     def browseFile(self):
         filenameForReading = askopenfilename()
         self.EnterdFile.set(filenameForReading)
-    
+
     #show result function 
-    def showResults(self, filenameForReading):
+    def showResults(self):
+        filenameForReading = self.EnterdFile.get()
         letterCount = {} #create empty dictionary 
         infile = open(filenameForReading, "r")
-         
+        for line in infile:
+            processLine(line.lower(), letterCount)
+        
+    def processLine(line, letterCount):
+        line = replacePunction(line)
+        for ch in line: 
+            if ch in letterCount:
+                letterCount[ch] +=1 
+            else: 
+                letterCount[ch] = 1
+
+
+
+    #replaces punction with blank space
+    def replacePunction(line):
+        for ch in line:
+           if ch in "~@#$%^&*()_-+=~<>?/,.;:!{}[]|'\"":
+                line = line.replace(ch, " ")
 
  
 
