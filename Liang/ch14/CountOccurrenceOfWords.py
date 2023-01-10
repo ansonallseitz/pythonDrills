@@ -24,7 +24,7 @@ def processLine(line, wordCounts):
         if word in wordCounts:
             wordCounts[word] += 1
         else:
-            wordCounts[word] = 1 # Add an item in the dictionary
+            wordCounts[word] = 1 # Add an item in the dictionaryy
 
 # Replace punctuation in the line with space
 def replacePunctuation(line):

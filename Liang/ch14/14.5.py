@@ -12,11 +12,11 @@ class LetterCounter():
         window.rowconfigure((1,2,3,4,5,6,7), weight =1)
 
 
-        window.geometry("1000x1000")
+        window.geometry("700x400")
  
         #create the canvas 
-        self.canvas = Canvas(window, width=900, height=900, bg="blue")
-        self.canvas.grid(column=0, row=0)
+        self.canvas = Canvas(window, width=500, height=300, bg="blue")
+        self.canvas.grid(column=0, row=0, padx=100, pady=20)
 
         BtshowResults = Button(window, text ="Show Results", command = self.showResults).grid(column=9, row = 7)
 
