@@ -20,6 +20,7 @@ class LetterCounter():
         #create the canvas 
         self.canvas = Canvas(window, width=700, height=400, bg="blue")
         self.canvas.grid(column=0, row=0, padx=100, pady=20, columnspan=8)
+        self.canvas.create_line(0, 370, 700, 370, width = 10, fill = "red")
 
 
     
