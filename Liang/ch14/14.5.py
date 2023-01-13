@@ -12,19 +12,25 @@ class LetterCounter():
         window.rowconfigure((1,2,3,4,5,6,7), weight =1)
 
 
-        window.geometry("700x400")
+        window.geometry("900x500")
+
+        #lets try to create a frame.
+        self.bottom_frame = Frame(window).grid(row=7, rowspan=6)
  
         #create the canvas 
-        self.canvas = Canvas(window, width=500, height=300, bg="blue")
-        self.canvas.grid(column=0, row=0, padx=100, pady=20)
+        self.canvas = Canvas(window, width=700, height=400, bg="blue")
+        self.canvas.grid(column=0, row=0, padx=100, pady=20, columnspan=8)
 
-        BtshowResults = Button(window, text ="Show Results", command = self.showResults).grid(column=9, row = 7)
 
-        BtnBrowse = Button(window, text="Browse", command =self.browseFile).grid(column=7, row =7)
+    
+        BtshowResults = Button(self.bottom_frame, text ="Show Results", command = self.showResults).grid(column=3, row = 7)
+        
+
+        BtnBrowse = Button(self.bottom_frame, text="Browse", command =self.browseFile).grid(column=2, row =7)
         #create the buttons 
         self.EnterdFile = StringVar()
-        Entry(window, textvariable = self.EnterdFile).grid(column=4, row=7)
-        Label(window, text="Enter a filename").grid(column=0, row=7)
+        Entry(self.bottom_frame, textvariable = self.EnterdFile).grid(column=1, row=7)
+        Label(self.bottom_frame, text="Enter a filename").grid(column=0, row=7)
 
 
 
@@ -75,10 +81,6 @@ class LetterCounter():
         return line
 
     #def replacePunction(self, line):
-     #   for ch in line:
-      #     if ch in "~@#$%^&*()_-+=~<>?/,.;:!{}[]|'\"":
-       #         line = line.replace(ch, " ")
-       #return line
 
 
  
